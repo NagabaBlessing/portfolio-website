@@ -1,3 +1,5 @@
+import ProjectCard from "../components/projectCard";
+
 export default function Projects() {
     return (
     <>
@@ -9,18 +11,10 @@ export default function Projects() {
 
        </div>
     </div>
-    <div className="flex min-h-screen justify-center">
-      <div className="w-158 h-96 bg-white border border-gray-200 mt-5 rounded-3xl shadow grid grid-cols-2 gap-0">
-           <div className="content-center">
-            <h1 className="text-3xl font-bold flex justify-center">Project Name</h1>
-            <p className="p-9">fhdngfngfngfnfgngfngfngfngfngfngngn</p>
-           </div>
-           <div className="m-0 p-0">
-           <h1>Project Name</h1>
-            <p>fhdngfngfngfnfgngfngfngfngfngfngngn</p>
-           </div>
-        </div>
-    </div>
+   <ProjectCard image="Image 1"/>
+   <ProjectCard image="Image 2" position="left"/>
+   <ProjectCard image="Image 3"/>
+
     </>
     )
 }
