@@ -8,7 +8,7 @@ export default function Navbar({ fixed }) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black"
+              className="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black"
               href="#pablo"
             >
               Sabrina Kitaka
@@ -20,7 +20,7 @@ export default function Navbar({ fixed }) {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <i style={{"color":"black"}} className="fas fa-bars"></i>
+              MENU
             </button>
           </div>
           <div
@@ -37,7 +37,7 @@ export default function Navbar({ fixed }) {
                   font-bold leading-snug text-black hover:opacity-75"
                   href="#pablo"
                 >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i><span className="ml-2">About</span>
+                  <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i><span className="ml-2 text-lg">About</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -46,7 +46,7 @@ export default function Navbar({ fixed }) {
                   hover:opacity-75"
                   href="#pablo"
                 >
-                  <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Projects</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2 text-lg">Projects</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -55,7 +55,7 @@ export default function Navbar({ fixed }) {
                   leading-snug text-black hover:opacity-75"
                   href="#pablo"
                 >
-                  <i className="fab fa-pinterest text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Contact me</span>
+                  <i className="fab fa-pinterest text-lg leading-lg text-black opacity-75"></i><span className="ml-2 text-lg">Contact me</span>
                 </a>
               </li>
             </ul>
