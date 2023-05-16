@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ProjectCard({position, image}) {
   return (
-    <div className="flex h-150 justify-center">
+    <div className="flex h-150 justify-center mb-20 mt-5">
     <div className="w-158 h-96 bg-white border border-gray-200 mt-5 rounded-3xl shadow grid grid-cols-2 gap-0">
         {
            position === "left" ? 
