@@ -1,10 +1,6 @@
 import React from 'react'
 
 export default function ProjectCard({image, projectName, children, description}) {
-
-    const projectImage = {
-        textAlign: "right"
-    }
   return (
     <div className="container mx-auto my-5">
     

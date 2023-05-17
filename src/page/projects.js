@@ -2,8 +2,6 @@ import ProjectCard from "../components/projectCard";
 
 
 export default function Projects() {
-
-   
     return (
     <>
     <div className="flex justify-center">

@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 export default function ContactMe() {
 
     const bottomImage = {
-        position: "absolute",
+        position: "fixed",
         bottom: "0px"
     }
 
@@ -23,7 +23,7 @@ export default function ContactMe() {
         )
     }
     return (
-    <>
+    <div className="min-h-[45rem]">
     <div className="flex justify-center">
         <h1 className="text-3xl font-bold tracking-wide">Contact Me</h1>
     </div>
@@ -59,9 +59,8 @@ export default function ContactMe() {
         <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 me-2  text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" data-name="Layer 1" viewBox="0 0 24 24" id="linkedin"><path d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"></path></svg>
     </a>
 </div>
-    <div style={bottomImage} className="bg-yellow-500 w-screen h-20 text-transparent object-bottom">
-        
+    <div style={bottomImage} className="bg-yellow-500 w-screen h-20 mt-20">
     </div>
-    </>
+    </div>
     )
 }
