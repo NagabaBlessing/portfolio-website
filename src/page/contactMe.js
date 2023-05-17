@@ -8,6 +8,7 @@ export default function ContactMe() {
         position: "absolute",
         bottom: "0px"
     }
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -30,7 +31,7 @@ export default function ContactMe() {
        <div className="bg-red-500 w-20 h-1 rounded mt-2"></div>
     </div>
     
-<form className="mx-96 mt-20" ref={form} onSubmit={sendEmail}>
+<form className="md:mx-96 mx-10 mt-20" ref={form} onSubmit={sendEmail}>
     <div className="mb-6">
         <div>
             <label for="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Name</label>
@@ -50,7 +51,7 @@ export default function ContactMe() {
 <button type="submit" className="bg-red-500 hover:bg-red-700 py-2 px-4 rounded mt-4">Send</button>
 </form>
 
-<div className="flex flex-grow ms-96 mt-3">
+<div className="flex flex-grow md:ms-96 ms-10 mt-3">
     <a href="https://www.instagram.com/sabrina_kitaka/?hl=en" class="items-center text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 me-2 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 256 256" id="instagram-logo"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="32"></circle><path d="M172,28H84A56.06353,56.06353,0,0,0,28,84v88a56.06353,56.06353,0,0,0,56,56h88a56.06353,56.06353,0,0,0,56-56V84A56.06353,56.06353,0,0,0,172,28ZM128,176a48,48,0,1,1,48-48A48.05436,48.05436,0,0,1,128,176Zm52-88a12,12,0,1,1,12-12A12,12,0,0,1,180,88Z"></path></svg>
     </a>

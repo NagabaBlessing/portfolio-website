@@ -2,6 +2,11 @@ import React from "react"
 
 
 export default function AboutMe() {
+    const bottomImage = {
+        position: "absolute",
+        bottom: "0px"
+    }
+
  return (
     <div className="grid md:grid-cols-2 gap-3">
         <div className="ms-4">
@@ -12,6 +17,9 @@ export default function AboutMe() {
         
         </div>
         <div>
+        </div>
+        <div style={bottomImage} className="bg-yellow-500 w-screen h-20 text-transparent object-bottom">
+        
         </div>
     </div>
 
