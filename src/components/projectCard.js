@@ -8,7 +8,7 @@ export default function ProjectCard({position, image}) {
            position === "left" ? 
            <>
             <div className="m-0 p-0">
-                <h1>{image}</h1>
+                <img src={image} alt='photo' />
                 <p>fhdngfngfngfnfgngfngfngnfgnfgnfgncncfngfngfngfngngn</p>
             </div>
             <div className="m-10">

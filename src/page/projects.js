@@ -1,4 +1,5 @@
 import ProjectCard from "../components/projectCard";
+import clinic from "../images/clinic.jpeg"
 
 export default function Projects() {
     return (
@@ -11,7 +12,7 @@ export default function Projects() {
 
        </div>
     </div>
-   <ProjectCard image="Image 1"/>
+   <ProjectCard image={clinic}/>
    <ProjectCard image="Image 2" position="left"/>
    <ProjectCard image="Image 3"/>
 
