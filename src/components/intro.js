@@ -16,7 +16,7 @@ export default function Intro() {
             <button className="border-2 border-black-500 text-black rounded py-2 px-4">LinkedIn</button>
             </a>
         </div>
-        <div>
+        <div className="h-screen w-auto" style={{backgroundPositionY:"20px",backgroundImage: 'url(/images/sahu.jpeg)', backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundBlendMode: "multiply"}}>
         </div>
     </div>
  )

@@ -8,7 +8,7 @@ export default function AboutMe() {
     }
 
  return (
-    <div className="grid md:grid-cols-2 gap-3">
+    <div className="grid md:grid-cols-2 gap-3 min-h-[60rem]">
         <div className="ms-4">
             
             <h1 className="text-8xl my-4">About me</h1>
