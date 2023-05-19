@@ -9,7 +9,7 @@ export default function Home() {
  return (
     <div className="min-h-[60rem]">
     <Intro/>
-    <div style={bottomImage} className="bg-yellow-500 w-screen h-20">
+    <div style={bottomImage} className="bg-red-500 w-screen h-20">
     </div>
     </div>
  )
