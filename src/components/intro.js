@@ -17,6 +17,9 @@ export default function Intro() {
             </a>
         </div>
         <div className="h-screen w-auto" style={{backgroundPositionY:"20px", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundBlendMode: "multiply"}}>
+        
+<img class="h-auto max-w-full" src="../images/home.jpeg" alt="image description"/>
+
         </div>
     </div>
  )

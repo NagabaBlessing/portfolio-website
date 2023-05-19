@@ -17,9 +17,12 @@ export default function AboutMe() {
         
         </div>
         <div>
+           <img class="h-auto max-w-full" src="../images/abtme.jpeg" alt="image description"/>
         </div>
         <div style={bottomImage} className="bg-yellow-500 w-screen h-20 text-transparent object-bottom">
-        
+           
+           <img class="h-auto max-w-full" src="../images/abtme.jpeg" alt="image description"/>
+
         </div>
     </div>
 
