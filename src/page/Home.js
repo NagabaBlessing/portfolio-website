@@ -7,7 +7,7 @@ export default function Home() {
       bottom: "0px"
   }
  return (
-    <div className="min-h-[60rem]">
+    <div className="md:min-h-[60rem] min-h-[100rem]">
     <Intro/>
     <div style={bottomImage} className="bg-red-500 w-screen h-20">
     </div>
