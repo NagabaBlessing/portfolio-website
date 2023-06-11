@@ -24,7 +24,7 @@ export default function ContactMe() {
     return (
     <div className="min-h-[90vh]">
     <div className="flex justify-center">
-        <h1 className="text-3xl mt-12 font-bold tracking-wide">Contact Me</h1>
+        <h1 className="text-3xl mt-12 font-bold text-black tracking-wide">Contact Me</h1>
     </div>
     <div className="flex justify-center">
        <div className="bg-red-500 w-20 h-1 rounded mt-2"></div>
@@ -33,20 +33,20 @@ export default function ContactMe() {
 <form className="md:mx-96 mx-10 mt-20" ref={form} onSubmit={sendEmail}>
     <div className="mb-6">
         <div>
-            <label for="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Name</label>
+            <label for="name" className="block mb-2 text-sm font-medium text-black">Name</label>
             <input type="text" name="name" id="name" className="bg-gray-50 h-12 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-transparent-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required/>
         </div>
     </div>
     <div>
         <div className="mb-6">
-            <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Email</label>
+            <label for="email" className="block mb-2 text-sm font-medium text-black">Email</label>
             <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-transparent-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required/>
         </div>
         <input type="hidden" name="receiver" value="sabrinakitaka@gmail.com"/> 
     </div>
 
     
-<label for="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Message</label>
+<label for="message" className="block mb-2 text-sm font-medium text-black">Message</label>
 <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-transparent-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ></textarea> 
 <button type="submit" className="bg-red-500 hover:bg-red-700 py-2 px-4 rounded mt-4">Send</button>
 </form>
