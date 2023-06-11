@@ -14,9 +14,18 @@ export default function AboutMe() {
  return (
     <>
     <div className="min-h-[100rem] md:block hidden">
-    <div className="grid md:grid-cols-2 gap-2">
-        <div className="ms-4">
-            <h1 className="md:text-8xl text-6xl my-4">About me</h1>
+    <div className="flex justify-center">
+        <h1 className="text-3xl mt-12 font-bold text-black tracking-wide">About Me</h1>
+    </div>
+    <div className="flex justify-center mb-6">
+       <div className="bg-red-500 w-20 h-1 rounded mt-2"></div>
+    </div>
+    
+    <div className="grid md:grid-cols-2 gap-2 m-12">
+    <div className="max-w-sm w-full lg:max-w-full lg:flex">
+  <div className=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+  <div className="ms-4">
+            
             <p className="text-gray-500 text-3xl my-4">
             Dr. Sabrina Bakeera-Kitaka is a Specialist Paediatrician and Senior Lecturer at the Department of Paediatrics and Child Health at Makerere University College of Health Sciences in Uganda. She obtained her MBChB degree in 1995 and her Masters of Paediatrics and Child Health in July 2002, both from Makerere University.
             </p><br/>
@@ -24,15 +33,17 @@ export default function AboutMe() {
             From 2003 to 2011, Dr. Bakeera-Kitaka was a Gilead Fellow and Research Scholar at the Infectious Diseases Institute, where she pursued a Fellowship in Paediatric Infectious Diseases and conducted research on HIV-infected adolescents. In 2020, she earned her PhD from the School of Biomedical Sciences at the University of Antwerp in Belgium.
             </p>
         </div>
-        <div style={{textAlign:"center", marginLeft:"50px"}}>
-            <img style={aboutImage} class="h-auto md:min-w-[35rem]" src="../images/abtme.jpeg" alt="image description"/>
-        </div>
+  </div>
+</div>
+<div className="h-48 lg:h-auto lg:w-75 w-100 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style={{backgroundImage: "url('./images/abtme.jpeg')"}} title="About me">
+  </div>
     </div>
     <div className="grid md:grid-cols-2 gap-2">
-    <div style={{textAlign:"center", marginLeft:"50px"}}>
-            <img style={aboutImage} class="h-auto md:min-w-[15rem]" src="../images/abtme2.jpg" alt="image description"/>
-        </div>
-        <div className="ms-4 mt-10">
+    <div className="h-48 lg:h-auto lg:w-75 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style={{backgroundImage: "url('./images/abtme2.jpg')"}} title="About me">
+  </div>
+    <div className="max-w-sm w-full lg:max-w-full lg:flex">
+  <div className=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+  <div className="ms-4 mt-10">
             <p className="text-gray-500 text-3xl my-4">
             Dr. Bakeera-Kitaka is actively involved in conducting basic research on various paediatric infectious diseases. She also provides clinical care to children and adolescents infected with HIV, many of whom acquired the infection during the perinatal period. She is the director of the Adolescent Health training program at Makerere University College of Health Sciences and serves as the Founder President of the Society of Adolescent Health in Uganda (www.sahu.ug).
             </p>
@@ -43,15 +54,23 @@ export default function AboutMe() {
             Dr. Bakeera-Kitaka's ultimate goal is to ensure that every child and adolescent has the opportunity to grow and reach their fullest potential.
             </p>
         </div>
+  </div>
+</div>
     </div>
     </div>
     <div className="min-h-[150rem] md:hidden block">
+    <div className="flex justify-center">
+        <h1 className="text-3xl mt-12 font-bold text-black tracking-wide">About Me</h1>
+    </div>
+    <div className="flex justify-center">
+       <div className="bg-red-500 w-20 h-1 rounded mt-2"></div>
+    </div>
+    
     <div className="grid md:grid-cols-2 gap-2">
         <div className="ms-4">
-        <div style={{textAlign:"center"}}>
+        <div style={{textAlign:"center", flex:1}}>
             <img style={aboutImage} class="h-auto md:min-w-[35rem]" src="../images/abtme.jpeg" alt="image description"/>
         </div>
-            <h1 className="md:text-8xl text-6xl my-4">About me</h1>
             <p className="text-gray-500 text-3xl my-4">
             Dr. Sabrina Bakeera-Kitaka is a Specialist Paediatrician and Senior Lecturer at the Department of Paediatrics and Child Health at Makerere University College of Health Sciences in Uganda. She obtained her MBChB degree in 1995 and her Masters of Paediatrics and Child Health in July 2002, both from Makerere University.
             </p><br/>
