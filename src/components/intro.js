@@ -8,7 +8,7 @@ const defaultTheme = createTheme()
 
 export default function Intro() {
  return (
-    <div className="md:min-h-[60rem] min-h-screen">
+    <div>
     <div className="md:flex hidden">
     <Grid container height={"100vh"} component="main">
         <CssBaseline />
@@ -56,7 +56,7 @@ export default function Intro() {
             <button className="bg-red-500 hover:bg-red-700 py-2 px-4 rounded ">Projects</button>          
             </Link>&nbsp;
             <a href="https://ug.linkedin.com/in/sabrina-kitaka-575b4b6a?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">
-            <button className="border-2 border-black-500 text-black rounded py-2 px-4">LinkedIn</button>
+            <button className="border-2 border-black-500 text-black rounded py-2 mb-12 px-4">LinkedIn</button>
             </a>
         </div>
     </div>

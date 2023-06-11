@@ -1,68 +1,120 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import { Grid } from "@mui/material";
 
-export default function Navbar({ fixed }) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+export default function Navbar(props,{ fixed }) {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        SABRINA KITAKA
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item.name} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <Link to={item.link}>
+                <ListItemText primary={item.name} />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  const container = window !== undefined ? () => window().document.body : undefined;
+
   return (
-    <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <Link
-              className="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black"
-              to="/"
-            >
-              Sabrina Kitaka
-            </Link>
-            <button
-              className="text-black cursor-pointer text-xl leading-none px-3 py-1 border 
-              border-solid border-transparent rounded bg-transparent block lg:hidden outline-none
-               focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-              MENU
-            </button>
-          </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex" : " hidden")
-            }
-            id="example-navbar-danger"
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar component="nav" sx={{bgcolor:"white"}}>
+        <Toolbar>
+          <IconButton
+            color="black"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase 
-                  font-bold leading-snug text-black hover:opacity-75"
-                  to="/about"
-                >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i><span className="ml-2 text-lg">About</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black 
-                  hover:opacity-75"
-                  to="/projects"
-                >
-                  <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2 text-lg">Projects</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold 
-                  leading-snug text-black hover:opacity-75"
-                  to="/contact-me"
-                >
-                  <i className="fab fa-pinterest text-lg leading-lg text-black opacity-75"></i><span className="ml-2 text-lg">Contact me</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </>
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            color="black"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, paddingRight:"20px" }}
+          >
+            SABRINA KITAKA
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Link to={item.link}>
+                <Button key={item.name} sx={{ color: 'black' }}>
+                  {item.name}
+                </Button>
+              </Link>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+      <Box
+  flex={1}
+  flexGrow={1}
+  flexDirection={"column"}
+  direction="column"
+  alignItems="center"
+  justifyContent="center"
+  marginTop={"60px"}
+>
+  {props.children}
+</Box>
+      
+    </Box>
   );
 }
+
+
+
+const drawerWidth = 240;
+const navItems = [{name:"Home", link:"/"},{name:"About", link:"/about"},{name:"Projects", link:"/projects"}, {name:"Contact Me", link:"/contact-me"}];
+

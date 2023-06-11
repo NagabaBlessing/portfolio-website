@@ -44,8 +44,6 @@ export default function AboutMe() {
             </p>
         </div>
     </div>
-    <div style={bottomImage} className="bg-red-500 w-screen h-20 text-transparent object-bottom">
-        </div>
     </div>
     <div className="min-h-[150rem] md:hidden block">
     <div className="grid md:grid-cols-2 gap-2">
@@ -78,8 +76,6 @@ export default function AboutMe() {
             </p>
         </div>
     </div>
-    <div style={bottomImage} className="bg-red-500 w-screen h-20 text-transparent object-bottom">
-     </div>
     </div>
     </>
  )
