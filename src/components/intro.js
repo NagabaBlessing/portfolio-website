@@ -1,11 +1,18 @@
-import React from "react"
+import { CssBaseline, Grid, Paper } from "@mui/material"
 import { Link } from "react-router-dom"
+import * as React from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const defaultTheme = createTheme()
 
 
 export default function Intro() {
  return (
     <div className="md:min-h-[60rem] min-h-screen">
     <div className="md:flex hidden">
+    <Grid container height={"100vh"} component="main">
+        <CssBaseline />
+        <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
         <div className="ms-4 mb-50 flex-1">
             <h5 className="text-red-500 tracking-widest text-lg font-bold my-4">UGANDAN PAEDIATRICIAN</h5>
             <h4 className="text-grey-800 tracking-widest text-xl font-italic font-bold my-4">Department of Paediatrics and Child health Makerere University</h4>
@@ -18,8 +25,24 @@ export default function Intro() {
             <button className="border-2 border-black-500 text-black rounded py-2 px-4">LinkedIn</button>
             </a>
         </div>
-        <div className="h-screen w-auto content-end flex-1" style={{ backgroundImage:"url(/images/home.jpeg)", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundBlendMode: "multiply"}}>
-        </div>
+        </Grid>
+        <Grid
+          item
+          xs={false}
+          sm={4}
+          md={6}
+          sx={{
+            backgroundImage: "url(./images/home.jpeg)",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: (t) =>
+              t.palette.mode === "light"
+                ? t.palette.grey[50]
+                : t.palette.grey[900],
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      </Grid>
     </div>
     <div className="md:hidden">
         <div className="h-[30rem] w-auto" style={{ backgroundImage:"url(/images/home.jpeg)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundBlendMode: "multiply"}}>
