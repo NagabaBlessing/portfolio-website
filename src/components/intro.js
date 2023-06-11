@@ -50,7 +50,7 @@ export default function Intro() {
         <div className="ms-4 mb-50">
         <h5 className="text-red-500 tracking-widest text-lg font-bold my-4">UGANDAN PAEDIATRICIAN</h5>
             <h4 className="text-grey-800 tracking-widest text-xl font-bold my-4">Department of Paediatrics and Child health Makerere University</h4>
-            <h1 className="text-7xl my-4">Hello, my name<br/> is Dr.Sabrina<br/> Bakeera Kitaka</h1>
+            <h1 className="text-7xl my-4">Dr.Sabrina Bakeera Kitaka</h1>
             <p className="text-gray-500 text-xl md:text-4xl my-4">Dr. Sabrina Bakeera Kitaka is an author of The Real Persuit of Excellence. Her autobiography and also a life coach and mentor.</p>
             <Link to="/projects">
             <button className="bg-red-500 hover:bg-red-700 py-2 px-4 rounded ">Projects</button>          
