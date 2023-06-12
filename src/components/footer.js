@@ -7,7 +7,7 @@ export default function Footer() {
   
   return (
     
-<footer class="bg-red-500 shadow">
+<footer class="bg-red-500 p-3 shadow">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
       <span class="text-sm text-white sm:text-center">© 2023 Dr. Sabrina Kitaka. All Rights Reserved.
     </span>&nbsp;

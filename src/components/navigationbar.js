@@ -28,7 +28,9 @@ export default function Navbar(props,{ fixed }) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
+        <Link to="/">
         SABRINA KITAKA
+        </Link>
       </Typography>
       <Divider />
       <List>
@@ -67,7 +69,9 @@ export default function Navbar(props,{ fixed }) {
             color="black"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, paddingRight:"20px" }}
           >
-            SABRINA KITAKA
+             <Link to="/">
+        SABRINA KITAKA
+        </Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (

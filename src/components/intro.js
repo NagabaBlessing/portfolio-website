@@ -1,9 +1,9 @@
 import { CssBaseline, Grid, Paper } from "@mui/material"
 import { Link } from "react-router-dom"
 import * as React from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
-const defaultTheme = createTheme()
 
 
 export default function Intro() {
@@ -14,10 +14,18 @@ export default function Intro() {
         <CssBaseline />
         <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
         <div className="ms-4 mb-50 flex-1">
-            <h5 className="text-red-500 tracking-widest text-lg font-bold my-4">UGANDAN PAEDIATRICIAN</h5>
+            <h5 className="text-red-500 tracking-widest text-lg font-bold my-4">
+            
+              UGANDAN PAEDIATRICIAN
+        
+              </h5>
             <h4 className="text-grey-800 tracking-widest text-xl font-italic font-bold my-4">Department of Paediatrics and Child health Makerere University</h4>
             <h1 className="text-8xl my-4">Dr.Sabrina Bakeera Kitaka</h1>
-            <p className="text-gray-500 text-xl md:text-4xl my-4">Dr. Sabrina Bakeera Kitaka is the author of Real Pursuit of Excellence,she is a mentor and life coach.</p>
+            <p className="text-gray-500 text-xl md:text-4xl mt-12 my-4">
+           
+            Dr. Sabrina Bakeera Kitaka is the author of Real Pursuit of Excellence,she is a mentor and life coach.
+        
+              </p>
             <Link to="/projects">
             <button className="bg-red-500 hover:bg-red-700 py-2 px-4 rounded ">Projects</button>          
             </Link>&nbsp;
