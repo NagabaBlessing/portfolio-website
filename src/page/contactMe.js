@@ -30,7 +30,7 @@ export default function ContactMe() {
        <div className="bg-red-500 w-20 h-1 rounded mt-2"></div>
     </div>
     
-<form className="md:mx-96 mx-10 mt-20" ref={form} onSubmit={sendEmail}>
+<form className="lg:mx-60 mx-10 mt-20" ref={form} onSubmit={sendEmail}>
     <div className="mb-6">
         <div>
             <label for="name" className="block mb-2 text-sm font-medium text-black">Name</label>

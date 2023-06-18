@@ -1,15 +1,14 @@
 import { CssBaseline, Grid, Paper } from "@mui/material"
 import { Link } from "react-router-dom"
 import * as React from "react";
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.min.css";
+
 
 
 
 export default function Intro() {
  return (
     <div>
-    <div className="md:flex hidden">
+    <div className="lg:flex hidden">
     <Grid container height={"100vh"} component="main">
         <CssBaseline />
         <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
@@ -52,8 +51,8 @@ export default function Intro() {
         />
       </Grid>
     </div>
-    <div className="md:hidden">
-        <div className="h-[30rem] w-auto" style={{ backgroundImage:"url(/images/home.jpeg)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundBlendMode: "multiply"}}>
+    <div className="lg:hidden">
+        <div className="h-[40rem] w-auto" style={{ backgroundImage:"url(/images/home.jpeg)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundBlendMode: "multiply"}}>
         </div>
         <div className="ms-4 mb-50">
         <h5 className="text-red-500 tracking-widest text-lg font-bold my-4">UGANDAN PAEDIATRICIAN</h5>
