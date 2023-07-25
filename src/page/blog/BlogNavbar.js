@@ -2,12 +2,16 @@ import { Create, Login, Logout } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Cookies from "universal-cookie";
 import Auth from "../../Firebase/Authentication";
+import Cookies from "universal-cookie";
 
 function BlogNavbar() {
   const navigate = useNavigate();
   const cookie = new Cookies();
+
+  const logOutHandler = async() => {
+    await new Auth().logOut()
+  }
   return (
     <div>
       <nav class="bg-gray-100 border-gray-200 mx-10 rounded-full shadow my-5">
@@ -25,7 +29,7 @@ function BlogNavbar() {
                 </Button>
                 <Button
                   className="ms-3"
-                  onClick={async () => await new Auth().logOut()}
+                  onClick={() => logOutHandler()}
                   sx={{ color: "darkgray", ":hover": { color: "black" } }}
                   to="#"
                 >
