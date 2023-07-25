@@ -30,7 +30,7 @@ export default class FireStore {
 
   updatePost = async (title = "", imageLink = "", postBody = "", id) => {
     let result = { val: null, code: null };
-    let update = { title: title, image: imageLink, content: postBody };
+    let update = { title: title, image: imageLink, content: postBody,timeStamp: new Date().getTime()};
     if (title === "") {
       delete update["title"];
     }

@@ -90,24 +90,24 @@ function BlogPost() {
         )
       ) : (
         <Grid container>
-          <Grid item xs={12}>
-            <div className="flex justify-center place-items-center md:mt-10">
+          <Grid item marginLeft={{ md: 25, sm:5 }}  xs={12}>
+            
               <div
-                className="h-[45vh] w-[80vw]"
+                className="h-[45vh] md:w-[90vw] xs:mx-5 md:mx-0 lg:w-[60vw]"
                 style={{
                   backgroundImage: `url(${post.image})`,
                   backgroundPosition: "center center",
                   backgroundSize: "cover",
                 }}
               ></div>
-            </div>
+          
           </Grid>
           <Grid item marginLeft={{ md: 25, xs: 5 }} marginTop={5} xs={12}>
             <Typography variant={"h2"} sx={{ fontSize: "35px" }}>
               {post.title}
             </Typography>
           </Grid>
-          <Grid item marginLeft={{ md: 26, xs: 5 }} xs={12}>
+          <Grid item marginLeft={{ md: 26, xs: 5 }} marginRight={{ md: 25, xs: 5 }}  xs={12}>
             <Typography
               variant="small"
               component="small"
@@ -121,6 +121,7 @@ function BlogPost() {
                 overflowX: "auto",
                 whiteSpace: "pre-wrap",
                 wordWrap: "break-word",
+                width:{lg:"60vw"}
               }}
               component="pre"
             >
