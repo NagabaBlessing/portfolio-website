@@ -53,12 +53,8 @@ export default function Intro() {
             sx={{
               backgroundImage: "url(./images/home.jpeg)",
               backgroundRepeat: "no-repeat",
-              backgroundColor: (t) =>
-                t.palette.mode === "light"
-                  ? t.palette.grey[50]
-                  : t.palette.grey[900],
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center center",
             }}
           />
         </Grid>
@@ -70,7 +66,7 @@ export default function Intro() {
             backgroundImage: "url(/images/home.jpeg)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundBlendMode: "multiply",
+            backgroundPosition: "center center",
           }}
         ></div>
         <div className="ms-4 mb-50">

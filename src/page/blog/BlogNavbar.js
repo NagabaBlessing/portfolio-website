@@ -10,7 +10,7 @@ function BlogNavbar() {
   const cookie = new Cookies();
   return (
     <div>
-      <nav class="bg-gray-100 border-gray-200 dark:bg-gray-900 mx-10 rounded-full shadow my-5">
+      <nav class="bg-gray-100 border-gray-200 mx-10 rounded-full shadow my-5">
         <div class="flex flex-wrap justify-between items-center max-w-screen-xl p-4">
           <div class="flex items-center">
             {cookie.get("login") == "true" ? (

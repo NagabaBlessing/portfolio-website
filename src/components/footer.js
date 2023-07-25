@@ -16,6 +16,9 @@ export default function Footer() {
           <Link to="/about" className="mr-4 hover:underline md:mr-6 ">
             About
           </Link>
+          <Link to="/blog" className="mr-4 hover:underline md:mr-6 ">
+            Blog
+          </Link>
           <Link to="/projects" className="mr-4 hover:underline md:mr-6 ">
             Projects
           </Link>
