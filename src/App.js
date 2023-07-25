@@ -11,6 +11,7 @@ import ContactMe from "./page/contactMe";
 import Projects from "./page/projects";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BlogPost from "./page/blog/BlogPost";
+import EditPost from "./page/blog/EditPost";
 
 function App() {
   const cookie = new Cookies();
@@ -28,6 +29,7 @@ function App() {
             <Route path="/blog/:id" element={<BlogPost />} />
             {cookie.get("login") == "true" ? (
               <>
+                <Route path="/blog/edit/:id" element={<EditPost />} />
                 <Route path="/create-post" element={<CreatePost />} />
               </>
             ) : null}
