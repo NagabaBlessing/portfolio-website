@@ -1,12 +1,21 @@
 import { CssBaseline, Grid, Paper } from "@mui/material";
 import { Link } from "react-router-dom";
 import * as React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Intro() {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Dr. Sabrina Kitaka</title>
+        <meta
+          name="description"
+          content="Portfolio Site for Dr. Sabrina Kitaka."
+        />
+      </Helmet>
       <div className="lg:flex hidden">
-        <Grid container height={"100vh"} component="main">
+        <Grid container minHeight={"100vh"} component="main">
           <CssBaseline />
           <Grid
             item

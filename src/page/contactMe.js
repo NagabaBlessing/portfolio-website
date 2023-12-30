@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactMe() {
   const bottomImage = {
@@ -24,6 +25,17 @@ export default function ContactMe() {
   };
   return (
     <div className="min-h-[90vh]">
+      <Helmet>
+        <title>Contact Me</title>
+        <meta
+          name="description"
+          content="Contact Dr. Sabrina Kitaka via email from here!"
+        />
+        <meta
+          name="keywords"
+          content="contact, health, youth, sabrina, kitaka"
+        />
+      </Helmet>
       <div className="flex justify-center">
         <h1 className="text-3xl mt-12 font-bold text-black tracking-wide">
           Contact Me

@@ -9,9 +9,9 @@ function BlogNavbar() {
   const navigate = useNavigate();
   const cookie = new Cookies();
 
-  const logOutHandler = async() => {
-    await new Auth().logOut()
-  }
+  const logOutHandler = async () => {
+    await new Auth().logOut();
+  };
   return (
     <div>
       <nav class="bg-gray-100 border-gray-200 mx-10 rounded-full shadow my-5">

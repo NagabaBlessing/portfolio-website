@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from "react";
-import FireStore from "../../Firebase/Firestore";
+import { Delete, Edit } from "@mui/icons-material";
 import {
   Alert,
+  Box,
   Button,
   CircularProgress,
   Grid,
   Snackbar,
   Typography,
 } from "@mui/material";
-import { useNavigate, useParams } from "react-router-dom";
-import { auth } from "../../Firebase/FirebaseConfig";
-import { Delete, Edit } from "@mui/icons-material";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { auth } from "../../Firebase/FirebaseConfig";
+import FireStore from "../../Firebase/Firestore";
+import { Helmet } from "react-helmet-async";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -82,6 +84,24 @@ function BlogPost() {
   }, []);
   return (
     <div className="min-h-screen">
+      {loading ? null : (
+        <Helmet>
+          <title>{post.title}</title>
+          <meta
+            name="description"
+            content={
+              post.content.length > 60
+                ? post.content.substring(0, 60) + "..."
+                : post.content
+            }
+          />
+          <meta
+            name="keywords"
+            content="blog, health, youth, sabrina, kitaka"
+          />
+        </Helmet>
+      )}
+
       {loading ? (
         post && (
           <div className="flex justify-center place-items-center mt-20">
@@ -90,24 +110,28 @@ function BlogPost() {
         )
       ) : (
         <Grid container>
-          <Grid item marginLeft={{ md: 25, sm:5 }}  xs={12}>
-            
-              <div
-                className="h-[45vh] md:w-[90vw] xs:mx-5 md:mx-0 lg:w-[60vw]"
-                style={{
-                  backgroundImage: `url(${post.image})`,
-                  backgroundPosition: "center center",
-                  backgroundSize: "cover",
-                }}
-              ></div>
-          
+          <Grid item marginLeft={{ md: 25, sm: 5 }} xs={12}>
+            <Box
+              component="div"
+              className="h-[80vh] md:w-[80vw] xs:mx-5 md:mx-0 lg:w-[60vw]"
+              sx={{
+                backgroundImage: `url(${post.image})`,
+                backgroundPosition: { sx: "center center", md: "center top" },
+                backgroundSize: "cover",
+              }}
+            ></Box>
           </Grid>
-          <Grid item marginLeft={{ md: 25, xs: 5 }} marginTop={5} xs={12}>
+          <Grid item marginX={{ md: 25, xs: 5 }} marginTop={5} xs={12}>
             <Typography variant={"h2"} sx={{ fontSize: "35px" }}>
               {post.title}
             </Typography>
           </Grid>
-          <Grid item marginLeft={{ md: 26, xs: 5 }} marginRight={{ md: 25, xs: 5 }}  xs={12}>
+          <Grid
+            item
+            marginLeft={{ md: 26, xs: 5 }}
+            marginRight={{ md: 25, xs: 5 }}
+            xs={12}
+          >
             <Typography
               variant="small"
               component="small"
@@ -121,7 +145,7 @@ function BlogPost() {
                 overflowX: "auto",
                 whiteSpace: "pre-wrap",
                 wordWrap: "break-word",
-                width:{lg:"60vw"}
+                width: { lg: "60vw" },
               }}
               component="pre"
             >

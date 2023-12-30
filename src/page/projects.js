@@ -1,8 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import ProjectCard from "../components/projectCard";
 
 export default function Projects() {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Projects</title>
+        <meta name="description" content="My Projects and accomplishments..." />
+      </Helmet>
       <div className="flex justify-center">
         <h1 className="text-3xl font-bold mt-12 tracking-wide">Projects</h1>
       </div>

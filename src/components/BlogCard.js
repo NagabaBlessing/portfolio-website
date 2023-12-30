@@ -14,7 +14,7 @@ export default function BlogCard({ title, body, timeStamp, id }) {
         paddingX: { xs: "20px" },
         maxWidth: "100vw",
         marginY: "20px",
-        maxHeight: "200px",
+        maxHeight: "260px",
       }}
     >
       <CardContent>

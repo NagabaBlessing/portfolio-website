@@ -1,15 +1,16 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function AboutMe() {
-  const bottomImage = {
-    position: "fixed",
-    bottom: "0px",
-  };
-
   const aboutImage = {};
 
   return (
     <>
+      <Helmet>
+        <title>About Me</title>
+        <meta name="description" content="About Dr. Sabrina Kitaka..." />
+        <meta name="keywords" content="about, health, youth, sabrina, kitaka" />
+      </Helmet>
       <div className="min-h-[100rem] lg:block hidden place-items-center">
         <div className="flex justify-center">
           <h1 className="text-3xl mt-12 font-bold text-black tracking-wide">

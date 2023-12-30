@@ -1,9 +1,9 @@
+import { CircularProgress, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import BlogNavbar from "./BlogNavbar";
-import BlogCard from "../../components/BlogCard";
-import { CircularProgress, Grid, Typography } from "@mui/material";
-import BlogSideCard from "../../components/BlogSideCard";
+import { Helmet } from "react-helmet-async";
 import FireStore from "../../Firebase/Firestore";
+import BlogCard from "../../components/BlogCard";
+import BlogNavbar from "./BlogNavbar";
 
 function Blog() {
   const [posts, setPosts] = useState([]);
@@ -30,6 +30,12 @@ function Blog() {
 
   return (
     <div style={{ minHeight: "100vh" }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Blog</title>
+        <meta name="description" content="Blog Posts by Dr. Sabrina Kitaka" />
+        <meta name="keywords" content="blog, health, youth, sabrina, kitaka" />
+      </Helmet>
       <BlogNavbar />
       <Grid container gap={1}>
         <Grid item xs={12}>
