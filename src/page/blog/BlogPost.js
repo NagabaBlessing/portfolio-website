@@ -116,7 +116,7 @@ function BlogPost() {
               className="h-[80vh] md:w-[80vw] xs:mx-5 md:mx-0 lg:w-[60vw]"
               sx={{
                 backgroundImage: `url(${post.image})`,
-                backgroundPosition: { sx: "center center", md: "center top" },
+                backgroundPosition: { sx: "center center", md: "center " },
                 backgroundSize: "cover",
               }}
             ></Box>

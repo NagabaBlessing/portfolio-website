@@ -30,6 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:functions": "cd functions && npm install && cd ..",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "npx prettier src --check",
