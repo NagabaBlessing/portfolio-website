@@ -110,17 +110,22 @@ function BlogPost() {
         )
       ) : (
         <Grid container>
-          <Grid item marginLeft={{ md: 25, sm: 5 }} xs={12}>
-            <Box
-              component="div"
-              className="h-[80vh] md:w-[80vw] xs:mx-5 md:mx-0 lg:w-[60vw]"
-              sx={{
-                backgroundImage: `url(${post.image})`,
-                backgroundPosition: { sx: "center center", md: "center " },
-                backgroundSize: "cover",
-              }}
-            ></Box>
-          </Grid>
+<Grid item xs={12}>
+  <Box
+    component="div"
+    className="min-h-[60vh] md:w-[60vw]"
+    sx={{
+      backgroundImage: `url(${post.image})`,
+      backgroundPosition: "center center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: { md: "cover", xs: "contain" },
+      margin: 'auto',
+    }}
+  ></Box>
+</Grid>
+
+
+
           <Grid item marginX={{ md: 25, xs: 5 }} marginTop={5} xs={12}>
             <Typography variant={"h2"} sx={{ fontSize: "35px" }}>
               {post.title}
