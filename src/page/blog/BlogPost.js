@@ -110,16 +110,17 @@ function BlogPost() {
         )
       ) : (
         <Grid container>
-<Grid item xs={12}>
+<Grid item xs={12} >
   <Box
     component="div"
-    className="min-h-[60vh] md:w-[60vw]"
+    className="md:min-h-[60vh] min-h-[50vh]  md:w-[60vw]"
     sx={{
       backgroundImage: `url(${post.image})`,
       backgroundPosition: "center center",
       backgroundRepeat: "no-repeat",
       backgroundSize: { md: "cover", xs: "contain" },
-      margin: 'auto',
+      marginX:"auto"
+  
     }}
   ></Box>
 </Grid>
