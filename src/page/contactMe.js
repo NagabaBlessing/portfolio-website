@@ -3,23 +3,30 @@ import emailjs from "emailjs-com";
 import { Helmet } from "react-helmet-async";
 
 export default function ContactMe() {
-  const bottomImage = {
-    position: "fixed",
-    bottom: "0px",
-  };
+
 
   const form = useRef();
 
-  const sendEmail = (e) => {
-    emailjs
+  const sendEmail = async (e) => {
+    e.preventDefault()
+    if (form.current.elements.message.value.trim() == "" || form.current.elements.message.value == null) {
+      alert("Message must not be empty!");
+      return
+    }
+    if (form.current.elements.email.value == "" || form.current.elements.email.value == null) {
+      alert("Email must not be email!");
+      return
+    }
+    
+    await emailjs
       .sendForm(
         "service_w8g7rad",
         "template_fimhyxs",
-        form.current,
+       form.current,
         "3TYT9NXUcbGryjiXo",
       )
       .then(
-        (result) => console.log(result.text),
+        (result) => {window.location.reload()},
         (error) => console.log(error.text),
       );
   };
