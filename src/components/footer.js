@@ -6,7 +6,7 @@ export default function Footer() {
     <footer class="bg-red-500 p-3 shadow">
       <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span class="text-sm text-white sm:text-center">
-          © 2023 Dr. Sabrina Kitaka. All Rights Reserved.
+          © 2023 Dr. Sabrina Kitaka. Crafted by <a href="https://innosolvetech.com">InnoSolve Tech.</a> 
         </span>
         &nbsp;
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
