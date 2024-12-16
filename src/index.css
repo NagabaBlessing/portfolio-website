@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Lato:ital,wght@0,100;0,400;1,100&family=Lora:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Lora", "Montserrat", "Lato", "EB Garamond";
+}
+
+code {
+  font-family: "Lora", "Montserrat", "Lato", "EB Garamond";
+}
