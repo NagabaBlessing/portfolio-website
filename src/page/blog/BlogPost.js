@@ -66,7 +66,6 @@ function BlogPost() {
         severity: "success",
       });
       setOpen(true);
-      await new Promise((res) => setTimeout(res, 2000));
       navigate("/blog");
     } catch (error) {
       setMessage({ 
@@ -159,11 +158,21 @@ function BlogPost() {
           </h1>
 
           <p className="text-gray-600 mb-6">
-            Last Updated: {new Date(post.timeStamp).toLocaleDateString()}
-          </p>
+  Last Updated: {new Intl.DateTimeFormat('en-GB', { 
+    timeZone: 'Africa/Nairobi', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric', 
+    hour: 'numeric', 
+    minute: 'numeric', 
+    second: 'numeric',
+    hour12: true // Use `false` for 24-hour format
+  }).format(new Date(post.timeStamp))} EAT
+</p>
+
 
           <div className="prose lg:prose-xl text-gray-800 mb-8">
-            <pre className="whitespace-pre-wrap break-words text-base leading-relaxed">
+          <pre  style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif' }} className="whitespace-pre-wrap break-words text-base leading-relaxed">
               {post.content}
             </pre>
           </div>
