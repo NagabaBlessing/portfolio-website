@@ -1,111 +1,121 @@
-import { CssBaseline, Grid, Paper } from "@mui/material";
+import React from "react";
+import { CssBaseline, Grid, Paper, Typography, Button, useMediaQuery, ThemeProvider, createTheme } from "@mui/material";
 import { Link } from "react-router-dom";
-import * as React from "react";
 import { Helmet } from "react-helmet-async";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-export default function Intro() {
+const theme = createTheme(); // Create a default Material-UI theme
+
+const Intro = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg")); // Ensure the theme is available
+
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Dr. Sabrina Kitaka</title>
-        <meta
-          name="description"
-          content="Portfolio Site for Dr. Sabrina Kitaka."
-        />
+        <meta name="description" content="Portfolio Site for Dr. Sabrina Kitaka." />
       </Helmet>
-      <div className="lg:flex hidden">
-        <Grid container minHeight={"100vh"} component="main">
-          <CssBaseline />
-          <Grid
-            item
-            xs={12}
-            sm={8}
-            md={6}
-            component={Paper}
-            elevation={6}
-            square
-          >
-            <div className="ms-4 mb-50 flex-1">
-              <h5 className="text-red-500 tracking-widest text-lg font-bold my-4">
-                UGANDAN PAEDIATRICIAN
-              </h5>
-              <h4 className="text-grey-800 tracking-widest text-xl font-italic font-bold my-4">
-                Department of Paediatrics and Child health Makerere University
-              </h4>
-              <h1 className="text-8xl my-4">Dr.Sabrina Bakeera Kitaka</h1>
-              <p className="text-gray-500 text-xl md:text-4xl mt-12 my-4">
-                Dr. Sabrina Bakeera Kitaka is the author of Real Pursuit of
-                Excellence,she is a mentor and life coach.
-              </p>
-              <Link to="/projects">
-                <button className="bg-red-500 hover:bg-red-700 py-2 px-4 rounded ">
-                  Projects
-                </button>
-              </Link>
-              &nbsp;
-              <a
-                href="https://ug.linkedin.com/in/sabrina-kitaka-575b4b6a?original_referer=https%3A%2F%2Fwww.google.com%2F"
-                target="_blank"
-              >
-                <button className="border-2 border-black-500 text-black rounded py-2 px-4">
-                  LinkedIn
-                </button>
-              </a>
-            </div>
-          </Grid>
-          <Grid
-            item
-            xs={false}
-            sm={4}
-            md={6}
-            sx={{
-              backgroundImage: "url(./images/home.jpeg)",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center center",
-            }}
-          />
-        </Grid>
-      </div>
-      <div className="lg:hidden">
-        <div
-          className="h-[40rem] w-auto"
-          style={{
-            backgroundImage: "url(/images/home.jpeg)",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-          }}
-        ></div>
-        <div className="ms-4 mb-50">
-          <h5 className="text-red-500 tracking-widest text-lg font-bold my-4">
-            UGANDAN PAEDIATRICIAN
-          </h5>
-          <h4 className="text-grey-800 tracking-widest text-xl font-bold my-4">
-            Department of Paediatrics and Child health Makerere University
-          </h4>
-          <h1 className="text-7xl my-4">Dr.Sabrina Bakeera Kitaka</h1>
-          <p className="text-gray-500 text-xl md:text-4xl my-4">
-            Dr. Sabrina Bakeera Kitaka is an author of The Real Persuit of
-            Excellence. Her autobiography and also a life coach and mentor.
-          </p>
-          <Link to="/projects">
-            <button className="bg-red-500 hover:bg-red-700 py-2 px-4 rounded ">
-              Projects
-            </button>
-          </Link>
-          &nbsp;
-          <a
-            href="https://ug.linkedin.com/in/sabrina-kitaka-575b4b6a?original_referer=https%3A%2F%2Fwww.google.com%2F"
-            target="_blank"
-          >
-            <button className="border-2 border-black-500 text-black rounded py-2 mb-12 px-4">
-              LinkedIn
-            </button>
-          </a>
-        </div>
-      </div>
+      <CssBaseline />
+      {isMobile ? <MobileLayout /> : <DesktopLayout />}
     </div>
   );
-}
+};
+
+const DesktopLayout = () => (
+  <Grid container component="main" sx={{ minHeight: "100vh" }}>
+    <Grid
+      item
+      xs={12}
+      sm={8}
+      md={6}
+      component={Paper}
+      elevation={6}
+      square
+      sx={{ p: 4 }}
+    >
+      <IntroContent />
+    </Grid>
+    <Grid
+      item
+      xs={false}
+      sm={4}
+      md={6}
+      sx={{
+        backgroundImage: "url(./images/home.jpg)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      }}
+    />
+  </Grid>
+);
+
+const MobileLayout = () => (
+  <div>
+    <div
+      style={{
+        height: "40rem",
+        backgroundImage: "url(/images/home.jpg)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      }}
+    ></div>
+    <Paper sx={{ p: 4 }}>
+      <IntroContent />
+    </Paper>
+  </div>
+);
+
+const IntroContent = () => (
+  <div>
+    <Typography variant="h5" color="error" gutterBottom sx={{ fontWeight: "bold", letterSpacing: 1 }}>
+      UGANDAN PAEDIATRICIAN
+    </Typography>
+    <Typography variant="h6" gutterBottom sx={{ fontStyle: "italic", fontWeight: "bold", letterSpacing: 1 }}>
+      Department of Paediatrics and Child Health, Makerere University
+    </Typography>
+    <Typography
+      variant="h2"
+      gutterBottom
+      sx={{ fontWeight: "bold", mt: 2, mb: 4 }}
+    >
+      Dr. Sabrina Bakeera Kitaka
+    </Typography>
+    <Typography
+      variant="body1"
+      sx={{ fontSize: { xs: "1.2rem", md: "2rem" }, color: "text.secondary", mb: 4 }}
+    >
+      Dr. Sabrina Bakeera Kitaka is the author of Real Pursuit of Excellence, a mentor, and a life coach.
+    </Typography>
+    <div>
+      <Link to="/projects" style={{ textDecoration: "none" }}>
+        <Button
+          variant="contained"
+          color="error"
+          sx={{ textTransform: "none", mr: 2 }}
+        >
+          Projects
+        </Button>
+      </Link>
+      <Button
+        variant="outlined"
+        href="https://ug.linkedin.com/in/sabrina-kitaka-575b4b6a?original_referer=https%3A%2F%2Fwww.google.com%2F"
+        target="_blank"
+        sx={{ textTransform: "none" }}
+        startIcon={<LinkedInIcon />}
+      >
+        LinkedIn
+      </Button>
+    </div>
+  </div>
+);
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <Intro />
+  </ThemeProvider>
+);
+
+export default App;
